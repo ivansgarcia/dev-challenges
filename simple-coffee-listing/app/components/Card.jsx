@@ -14,7 +14,7 @@ const Card = ({ product }) => {
                     </span>
                 )}
                 <Image
-                    priority="blur"
+                    placeholder="blur"
                     className="rounded-xl"
                     src={image}
                     alt="ima"
