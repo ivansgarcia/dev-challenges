@@ -24,7 +24,7 @@ const Collection = () => {
         : productList;
 
     return (
-        <main className="z-10 mt-20 flex w-96 flex-col items-center gap-6 rounded-xl bg-dark-grey bg-[url('/images/vector.svg')] bg-[right_-62px_top_40px] bg-no-repeat p-7 pb-12 md:w-[70%] md:bg-[right_100px_top_40px] xl:w-[85.5%] xl:bg-[right_305px_top_40px]">
+        <main className="z-10 mt-40 flex w-96 flex-col items-center gap-5 rounded-xl bg-dark-grey bg-[url('/images/vector.svg')] bg-[right_-63px_top_35px] bg-no-repeat p-7 pb-12 md:w-[70%] md:bg-[right_100px_top_40px] xl:w-[85.5%] xl:bg-[right_305px_top_40px]">
             <Header />
             <nav className="ml-6 flex justify-center gap-2 text-sm font-semibold text-cream md:ml-0 md:gap-4">
                 <button
@@ -43,7 +43,7 @@ const Collection = () => {
             {productList ? (
                 <ProductList list={filteredList} />
             ) : (
-                <div className="w-28 my-4 animate-pulse-fast text-cream">
+                <div className="animate-pulse-fast my-4 w-28 text-cream">
                     <Image
                         src="/images/dots.png"
                         alt="loading"

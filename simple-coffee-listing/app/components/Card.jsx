@@ -2,11 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 
 const Card = ({ product }) => {
-    const { id, name, image, price, rating, votes, popular, available } =
-        product;
+    const { name, image, price, rating, votes, popular, available } = product;
 
     return (
-        <section className="flex w-64 flex-col gap-2 pb-4 font-semibold text-cream">
+        <section className="flex w-64 flex-col gap-2 pb-3 font-semibold text-cream">
             <figure>
                 {popular && (
                     <span className="absolute m-2 rounded-full bg-yellow px-2 py-0.5 text-[10px] text-black">
@@ -14,7 +13,6 @@ const Card = ({ product }) => {
                     </span>
                 )}
                 <Image
-                    placeholder="blur"
                     className="rounded-xl"
                     src={image}
                     alt="ima"
@@ -29,7 +27,12 @@ const Card = ({ product }) => {
                 </span>
             </div>
             <footer className="flex items-center gap-1 text-sm">
-                <Image src={rating ? '/images/Star_fill.svg' : '/images/Star.svg'} alt="star" width={24} height={24} />
+                <Image
+                    src={rating ? '/images/Star_fill.svg' : '/images/Star.svg'}
+                    alt="star"
+                    width={24}
+                    height={24}
+                />
                 <span>{rating}</span>
                 <span className="text-grey">
                     {rating ? `(${votes} votes)` : 'No ratings'}
